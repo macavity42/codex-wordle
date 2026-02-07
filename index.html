@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wordle Bloom</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Daily word puzzle</p>
+          <h1>Wordle Bloom</h1>
+          <p class="subtitle">
+            Guess the hidden five-letter word in six tries. Track your streak, feel the
+            glow, and enjoy the confetti.
+          </p>
+        </div>
+        <button class="ghost" id="newGame">New Word</button>
+      </header>
+
+      <section class="status" aria-live="polite">
+        <div class="pill"><span id="message">Start typing to play.</span></div>
+        <div class="stats">
+          <div>
+            <span class="label">Wins</span>
+            <span id="wins">0</span>
+          </div>
+          <div>
+            <span class="label">Streak</span>
+            <span id="streak">0</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="board" id="board" aria-label="Wordle board"></section>
+
+      <section class="keyboard" id="keyboard" aria-label="On screen keyboard"></section>
+
+      <section class="helper">
+        <div class="legend">
+          <span class="tile correct">W</span>
+          <span>Correct spot</span>
+        </div>
+        <div class="legend">
+          <span class="tile present">O</span>
+          <span>In the word</span>
+        </div>
+        <div class="legend">
+          <span class="tile absent">R</span>
+          <span>Not in word</span>
+        </div>
+      </section>
+    </div>
+
+    <canvas id="confetti"></canvas>
+    <script src="app.js"></script>
+  </body>
+</html>
